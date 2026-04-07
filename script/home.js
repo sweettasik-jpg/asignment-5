@@ -38,7 +38,7 @@ const loadDatas = () => {
 
         for (let data of datas ) {
             const dataCard = document.createElement("div");
-            dataCard.innerHTML = `  <div onclick='openModal(${data})' class="card h-full space-y-3 rounded-md p-4 bg-white mt-4       border-t-4 ${data.status==='open'? 'border-green-600' : 'border-purple-600'} ">
+            dataCard.innerHTML = `  <div onclick='openModal(${JSON.stringify(data)})' class="card h-full space-y-3 rounded-md p-4 bg-white mt-4       border-t-4 ${data.status==='open'? 'border-green-600' : 'border-purple-600'} ">
                      <div class="flex items-center justify-between gap-2">
                          <img src="./assets/Open-Status.png" alt="">
                          <button class="btn btn-soft w-[90px] h-[24px] rounded-full bg-red-100 text-red-500">${data.priority}</button>
@@ -75,9 +75,12 @@ const loadDatas = () => {
 
     }
 
-    const modal = doucment.getElementById("modal");
-const openModal = (data) => {
-modal.innerHTML = `<section id="modal" class=" grid place-content-center w-full h-screen bg-black/5">
+    const modal = document.getElementById("modal");
+const openModal = (dataJSON) => {
+console.log(dataJSON);
+let data = JSON.parse(dataJSON);
+console.log(data);
+modal.innerHTML = `<section class="grid place-content-center w-full h-screen bg-black/5">
             <div class="bg-white p-3 flex-col ">
                 <h3 id="modal-title">${data.title}</h3>
                 <span id="modal-status">${data.status}</span>
