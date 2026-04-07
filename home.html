@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-5</title>
+
+    <!-- daisyUI + Tailwind CSS links -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- font icon link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+     <style>
+        *{
+             font-family: "Geist", sans-serif;
+        }
+     </style>
+
+</head>
+<body class="bg-base-300">
+    <header class=" max-w-9xl bg-base-200 mx-auto  mb-4">
+        <div class="navbar grid grid-cols-2 justify-between items-center bg-base-200 p-4">
+            <div class="flex items-center justify-center  mb-4">
+                <img class="w-10 h-10" src="./assets/github-logo.png" alt="">
+                <a class="btn btn-ghost text-xl">GitHub Issues Tracker</a>
+            </div>
+
+            <div class="flex items-center justify-center gap-2">
+            <input type="text" placeholder="Search issues..." class="input input-bordered w-24 md:w-auto" />
+            <button class="btn btn-primary"><i class="fa-solid fa-plus"></i>New Issue</button>
+            </div>
+        </div>
+
+    </header>
+
+    <main class="min-h-screen max-w-6xl bg-base-200 mx-auto">
+        <section >
+
+                <div id="tab-buttons"  class="flex items-center justify-start gap-2 mb-3 bg-white p-4">
+                    <button id="all-button" class="btn btn-primary">all</button>
+                
+                
+                    <button id="open-button" class="btn btn-soft">Open</button>
+                
+                
+                    <button id="closed-button" class="btn btn-soft">Closed</button>
+                </div>      
+        </section>
+
+        <section >
+         <div>
+
+             <div class="flex items-center gap-2 bg-white p-4 ">
+                 <img  src="./assets/Aperture.png" alt="">
+                 <div>
+                     <h6 class="text-xl font-semibold"><span id="count">50</span> Issues</h6>
+                     <p class="text-gray-500">Track and manage your project issues</p>
+                 </div>
+             
+             </div>
+             
+             <div id="data-container" class="mx-auto p-3 grid grid-cols-3 gap-4">
+ 
+                 
+                 
+                
+ 
+                     
+             </div>
+         </div>   
+        </section>
+
+        <div id="modal"></div>
+    </main>
+
+    <script src="./script/home.js"></script>
+</body>
+</html>
